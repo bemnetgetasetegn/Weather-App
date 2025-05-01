@@ -14,7 +14,7 @@ const Weather = () => {
           src={data?.current.condition.icon}
           alt={data?.current.condition.text}
         />
-        <Forcast />
+        {/* <Forcast /> */}
       </div>
     </div>
   );

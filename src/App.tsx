@@ -1,13 +1,14 @@
 import NavBar from "./assets/Components/NavBar";
 import Weather from "./assets/Components/Weather";
-import style from "./index.css";
 
 const App = () => {
   return (
-    <>
-      <NavBar />
-      <Weather />
-    </>
+    <div className="flex justify-center items-center flex-col bg-[url('./assets/Pictures/dat.png')] bg-cover bg-center h-screen">
+      <div className="">
+        <NavBar />
+        <Weather />
+      </div>
+    </div>
   );
 };
 

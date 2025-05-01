@@ -1,7 +1,6 @@
 import { useRef } from "react";
 
 const NavBar = () => {
-
   const ref = useRef<HTMLInputElement>(null);
   return (
     <nav className="flex justify-between">
