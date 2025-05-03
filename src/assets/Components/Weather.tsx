@@ -4,17 +4,12 @@ import Forcast from "./Forcast";
 const Weather = () => {
   const { data } = useWeather();
   return (
-    <div>
-      {data?.current.is_day ? <p>Day</p> : <p>Night</p>}
-      <p>{data?.current.last_updated}</p>
-      <p>{data?.location.localtime}</p>
-      <div>
-        <p>{data?.current.condition.text}</p>
-        <img
-          src={data?.current.condition.icon}
-          alt={data?.current.condition.text}
-        />
-        {/* <Forcast /> */}
+    <div className="border">
+      <div className="flex flex-col">
+        <span>{data?.current.temp_c}&deg; </span>
+        <span>{data?.current.condition.text}</span>
+        <span>{data?.location.name}</span>
+        <span>{data?.location.localtime}</span>
       </div>
     </div>
   );
