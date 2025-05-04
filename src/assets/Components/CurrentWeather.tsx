@@ -8,12 +8,17 @@ interface Props {
 
 const CurrentWeather = ({ current, location }: Props) => {
   return (
-    <div className="border">
-      <div className="flex flex-col">
-        <span>{current?.temp_c}&deg; </span>
-        <span>{current?.condition.text}</span>
-        <span>{location?.name}</span>
-        <span>{location?.localtime}</span>
+    <div className="border md:w-150 rounded-2xl">
+      <div className="flex">
+        <div className="p-4 flex flex-col">
+          <span className="text-7xl ">{current?.temp_c}&deg; </span>
+          <span className="text-4xl">{current?.condition.text}</span>
+          <span className="text-3xl">{location?.name}</span>
+          <span className="text-2xl">{location?.localtime}</span>
+        </div>
+        <div>
+          <img src={current?.condition.icon} alt="" />
+        </div>
       </div>
     </div>
   );
