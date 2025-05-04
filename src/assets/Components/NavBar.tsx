@@ -4,7 +4,7 @@ import logo from "../Pictures/WeatherLogo.png";
 const NavBar = () => {
   const ref = useRef<HTMLInputElement>(null);
   return (
-    <div className="flex backdrop-blur-[2px] w-full border-[1px] border-gray-400 my-10 py-3 t justify-around items-center rounded-2xl">
+    <div className="flex w-full border-[1px] border-gray-400 my-10 py-3 t justify-around items-center rounded-2xl">
       <div className="flex items-center">
       <img src={logo} alt="" className="size-10 rounded-2xl" /> <span className="px-3 text-white font-bold text-2xl">Weather App</span>
       </div>
