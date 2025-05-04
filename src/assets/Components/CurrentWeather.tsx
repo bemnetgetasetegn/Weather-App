@@ -18,8 +18,8 @@ const CurrentWeather = ({ current, location }: Props) => {
             <span>{location?.localtime.substring(10)}</span>
           </span>
         </div>
-        <div className="p-10">
-          <img src={current?.condition.icon} alt="" />
+        <div className="p-5 px-10">
+          <img width={"100px"} src={current?.condition.icon} alt="" />
         </div>
       </div>
     </div>

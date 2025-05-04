@@ -8,7 +8,7 @@ const apiInstance = axios.create({
     baseURL: 'https://api.weatherapi.com/v1',
     params:{
         key: '77181752f7174ea895f155437252502',
-        q: `kenya`
+        q: `Ethiopia`
     }
 });
 
