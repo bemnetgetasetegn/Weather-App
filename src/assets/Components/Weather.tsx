@@ -5,9 +5,7 @@ import CurrentWeather from "./CurrentWeather";
 const Weather = () => {
   const { data } = useWeather();
   return (
-    <>
       <CurrentWeather location={data?.location} current={data?.current} />
-    </>
   );
 };
 
