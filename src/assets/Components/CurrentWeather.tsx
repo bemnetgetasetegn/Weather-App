@@ -16,7 +16,9 @@ const CurrentWeather = ({ current, location }: Props) => {
           <span className="text-4xl whitespace-nowrap">
             {current?.condition.text}
           </span>
-          <span className="text-3xl">{location?.name}</span>
+          <span className="text-3xl">
+            {location?.name}, {location?.country}
+          </span>
           <span className="text-2xl">
             <span>{TwelveHrFormat(location?.localtime.substring(11))}</span>
           </span>

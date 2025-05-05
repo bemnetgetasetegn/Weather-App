@@ -3,7 +3,7 @@ import Weather from "./assets/Components/Weather";
 
 const App = () => {
   return (
-    <div className="flex text-white justify-center items-center flex-col bg-[linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('./assets/Pictures/dat.png')] bg-cover bg-center h-screen">
+    <div className="flex text-white justify-center items-center flex-col bg-[linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('./assets/Pictures/dat.png')] bg-cover bg-center h-full bg-fixed">
       <div className="w-screen p-5 lg:p-20 backdrop-blur-[3px]">
         <NavBar />
         <Weather />

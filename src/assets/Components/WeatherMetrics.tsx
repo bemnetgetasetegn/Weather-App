@@ -18,15 +18,23 @@ const WeatherMetrics = ({ current }: Props) => {
     NW: "315deg",
   };
   return (
-    <div className="flex border border-white/30 rounded-2xl">
-      <span>hello</span>
-      <img
-        src={windDrection}
-        alt={current.wind_dir}
-        className={`transform size-20`}
-        style={{ transform: `rotate(${directions[current.wind_dir]})` }}
-      />
-      {current.wind_dir}
+    <div className=" border border-white/30 rounded-2xl">
+      <div className=" flex p-9 text-2xl font-bold justify-between items-center">
+        <div className="">
+          <div className="flex justify-center items-center w-20 h-20">
+            <img
+              src={windDrection}
+              alt={current.wind_dir}
+              className={`transform size-20`}
+              style={{ transform: `rotate(${directions[current.wind_dir]})` }}
+            />
+            <span className="">{current.wind_kph}Kph</span>
+          </div>
+        </div>
+        <div className="">
+          <span className="">Cloud {current.cloud}</span>
+        </div>
+      </div>
     </div>
   );
 };
