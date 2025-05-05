@@ -1,5 +1,6 @@
 import { current } from "../Entities/current";
 import { location } from "../Entities/location";
+import { TwelveHrFormat } from "../Services/TwelveHrFormat";
 
 interface Props {
   current?: current;
@@ -7,15 +8,19 @@ interface Props {
 }
 
 const CurrentWeather = ({ current, location }: Props) => {
+  console.log(location?.localtime.substring(11));
+
   return (
-    <div className="border md:w-110 rounded-2xl">
+    <div className="border border-white/20 md:w-110 rounded-2xl">
       <div className="flex">
         <div className="p-4 space-y-2 flex flex-col">
           <span className="text-7xl ">{current?.temp_c}&deg; </span>
-          <span className="text-4xl">{current?.condition.text}</span>
+          <span className="text-4xl whitespace-nowrap">
+            {current?.condition.text}
+          </span>
           <span className="text-3xl">{location?.name}</span>
           <span className="text-2xl">
-            <span>{location?.localtime.substring(10)}</span>
+            <span>{TwelveHrFormat(location?.localtime.substring(11))}</span>
           </span>
         </div>
         <div className="p-5 px-10">
