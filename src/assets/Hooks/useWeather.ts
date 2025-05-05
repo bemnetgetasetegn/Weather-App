@@ -6,11 +6,8 @@ const apiClients = new APIClients<Response>('/current.json')
 
 const useWeather = () => {
     const query = querySetter(s => s.q)
-    console.log(query);
-    
-
     return useQuery({
-    queryKey: ['weather'],
+    queryKey: ['weather',query],
     queryFn: () => apiClients.get({
         params: {
             q: query

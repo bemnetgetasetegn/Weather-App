@@ -1,5 +1,6 @@
 import { create } from "zustand"
 
+
 interface QueryStore {
     q: string
     Query: (location: string) => void

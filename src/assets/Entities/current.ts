@@ -10,4 +10,7 @@ export interface current {
         text: string;
         icon: string;
     };
+    wind_dir: string
+    uv: number
+    cloud: number
 }
