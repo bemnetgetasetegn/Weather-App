@@ -8,11 +8,9 @@ interface Props {
 }
 
 const CurrentWeather = ({ current, location }: Props) => {
-  console.log(location?.localtime.substring(11));
-
   return (
-    <div className="border border-white/20 md:w-110 rounded-2xl">
-      <div className="flex">
+    <div className="border border-white/20 md:w-[50%] rounded-2xl">
+      <div className="flex justify-between">
         <div className="p-4 space-y-2 flex flex-col">
           <span className="text-7xl ">{current?.temp_c}&deg; </span>
           <span className="text-4xl whitespace-nowrap">
@@ -23,7 +21,7 @@ const CurrentWeather = ({ current, location }: Props) => {
             <span>{TwelveHrFormat(location?.localtime.substring(11))}</span>
           </span>
         </div>
-        <div className="p-5 px-10">
+        <div className="p-5">
           <img width={"100px"} src={current?.condition.icon} alt="" />
         </div>
       </div>

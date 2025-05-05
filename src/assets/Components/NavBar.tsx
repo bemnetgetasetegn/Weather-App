@@ -1,8 +1,10 @@
 import { useRef } from "react";
 import logo from "../Pictures/WeatherLogo.png";
+import querySetter from "../../Store";
 
 const NavBar = () => {
   const ref = useRef<HTMLInputElement>(null);
+  const setQuery = querySetter((s) => s.Query);
   return (
     <div className="flex w-full border-[1px] border-white/20 my-10 py-3 t justify-around items-center rounded-2xl">
       <div className="flex items-center px1 md:px-10">
@@ -16,8 +18,8 @@ const NavBar = () => {
           action=""
           onSubmit={(e) => {
             e.preventDefault();
-            if (ref.current) {
-              console.log(ref.current.value);
+            if (ref.current?.value) {
+              setQuery(ref.current.value);
             }
           }}
         >

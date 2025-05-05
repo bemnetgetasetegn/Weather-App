@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import { location } from "../Entities/location";
 import { current } from "../Entities/current";
 import { forcast } from "../Entities/forcast";
@@ -25,9 +25,9 @@ class APIClients<T> {
         this.endpoint = endpoint
     }
 
-    get = () => {
+    get = (config?: AxiosRequestConfig) => {
        return apiInstance
-            .get<T>(this.endpoint)
+            .get<T>(this.endpoint, config)
             .then(res => res.data);
     }
 }
