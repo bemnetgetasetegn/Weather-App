@@ -1,11 +1,18 @@
 import useWeather from "../Hooks/useWeather";
 import CurrentWeather from "./CurrentWeather";
+import WeatherMetrics from "./WeatherMetrics";
 // import Forcast from "./Forcast";
 
 const Weather = () => {
   const { data, error } = useWeather();
   if (error) return <p className="text-2xl font-bold">{error.message}</p>;
-  return <CurrentWeather location={data?.location} current={data?.current} />;
+
+  return (
+    <div className="grid md:grid-rows-2 md:grid-cols-[60%_auto] gap-4">
+      <CurrentWeather location={data?.location} current={data?.current} />
+      <WeatherMetrics current={data?.current} />
+    </div>
+  );
 };
 
 export default Weather;

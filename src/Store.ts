@@ -7,7 +7,7 @@ interface QueryStore {
 }
 
 const querySetter = create<QueryStore>(set => ({
-    q: 'Ethiopia',
+    q: 'Addis Abeba',
     Query: (location: string) => set(() => ({q:location}))
 }))
 

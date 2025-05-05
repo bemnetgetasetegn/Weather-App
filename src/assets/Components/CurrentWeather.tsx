@@ -1,6 +1,5 @@
 import { current } from "../Entities/current";
 import { location } from "../Entities/location";
-import useLocationHandler from "../Hooks/UseLocationHandler";
 import { TwelveHrFormat } from "../Services/TwelveHrFormat";
 
 interface Props {
@@ -9,11 +8,10 @@ interface Props {
 }
 
 const CurrentWeather = ({ current, location }: Props) => {
-  useLocationHandler();
   return (
-    <div className="border border-white/20 md:w-[70%] rounded-2xl">
+    <div className="border border-white/20 rounded-2xl">
       <div className="flex justify-between">
-        <div className="p-4 space-y-2 flex flex-col">
+        <div className="p-4 space-y-3 flex flex-col">
           <span className="text-7xl ">{current?.temp_c}&deg; </span>
           <span className="text-4xl whitespace-nowrap">
             {current?.condition.text}
@@ -23,7 +21,7 @@ const CurrentWeather = ({ current, location }: Props) => {
             <span>{TwelveHrFormat(location?.localtime.substring(11))}</span>
           </span>
         </div>
-        <div className="p-5">
+        <div className="">
           <img width={"100px"} src={current?.condition.icon} alt="" />
         </div>
       </div>
