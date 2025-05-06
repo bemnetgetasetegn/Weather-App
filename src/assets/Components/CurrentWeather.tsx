@@ -9,10 +9,10 @@ interface Props {
 
 const CurrentWeather = ({ current, location }: Props) => {
   return (
-    <div className="border border-white/20 rounded-2xl">
+    <div className="border transform transition-transform hover:scale-102 border-white/20 rounded-2xl">
       <div className="flex justify-between">
         <div className="p-4 space-y-3 flex flex-col">
-          <span className="text-7xl ">{current?.temp_c}&deg; </span>
+          <span className="text-7xl ">{current?.temp_f}&deg; </span>
           <span className="text-4xl whitespace-nowrap">
             {current?.condition.text}
           </span>

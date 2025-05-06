@@ -1,5 +1,6 @@
 import { current } from "../Entities/current";
 import windDrection from "../Pictures/WindDirections.png";
+import HeatIndex from "../Pictures/HeatIndex.png";
 import { FaCloud } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
 
@@ -20,7 +21,7 @@ const WeatherMetrics = ({ current }: Props) => {
     NW: "315deg",
   };
   return (
-    <div className=" border border-white/30 rounded-2xl">
+    <div className="border transform transition-transform hover:scale-102 border-white/30 rounded-2xl">
       <div className="grid  grid-cols-2 grid-rows-3  p-3 text-2xl font-bold ">
         <div className="flex items-center ">
           <img
@@ -38,7 +39,7 @@ const WeatherMetrics = ({ current }: Props) => {
           <WiHumidity size={50} /> {current.humidity}
         </div>
         <div className="flex gap-4 pl-15 items-center ">
-          <WiHumidity size={50} /> {current.humidity}
+          <img src={HeatIndex} color="white" /> {current.heatindex_f}
         </div>
         <div className="flex gap-4 pl-4 items-center ">
           <WiHumidity size={50} /> {current.humidity}

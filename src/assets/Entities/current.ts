@@ -15,4 +15,5 @@ export interface current {
     wind_kph: number
     uv: number
     cloud: number
+    heatindex_f:number
 }
