@@ -17,3 +17,4 @@ export interface current {
     cloud: number
     heatindex_f:number
 }
+

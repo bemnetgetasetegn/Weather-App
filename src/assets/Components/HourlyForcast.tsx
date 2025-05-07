@@ -15,11 +15,11 @@ const HourlyForcast = ({ forcast }: Props) => {
     (f) => parseInt(f.time.substring(11)) >= hr
   );
   return (
-    <div className="border h-40 gap-5 flex items-center justify-center">
-      {flatten.slice(0, 6).map((fla) => (
+    <div className="border-[1px] border-white/30 transform transition-transform rounded-2xl h-40 gap-5 flex items-center justify-center">
+      {flatten.slice(0, 7).map((fla) => (
         <ForeCastCard
           key={fla.time}
-          time={TwelveHrFormat(fla.time)}
+          time={TwelveHrFormat(fla.time.substring(11))}
           temp={fla.temp_f}
           icon={fla.condition.icon}
         />
