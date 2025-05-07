@@ -25,31 +25,31 @@ const WeatherMetrics = ({ current }: Props) => {
 
   return (
     <div className="border transform transition-transform hover:scale-102 border-white/30 rounded-2xl">
-      <div className="grid  grid-cols-2 grid-rows-3  p-3 text-2xl font-bold ">
-        <div className="flex items-center ">
+      <div className="grid grid-cols-2 grid-rows-3  md:p-3 md:text-2xl text-[15px] font-bold ">
+        <div className="flex items-center">
           <img
             src={windDrection}
             alt={current.wind_dir}
-            className={`transform size-20`}
+            className={`transform size-15`}
             style={{ transform: `rotate(${directions[current.wind_dir]})` }}
           />
           <span className="">{current.wind_kph} Kph</span>
         </div>
-        <div className="flex gap-4 justify-center items-center">
+        <div className="flex gap-1 justify-center items-center">
           <FaCloud size={40} /> {current.cloud}%
         </div>
-        <div className="flex gap-4 pl-4 items-center ">
+        <div className="flex gap-1 justify-center items-center ">
           <WiHumidity size={50} /> {current.humidity}%
         </div>
-        <div className="flex  pl-12 items-center ">
+        <div className="flex gap-1 justify-center items-center">
           <img className="size-15" src={HeatIndex} color="white" />{" "}
           {current.heatindex_f}&deg;F
         </div>
-        <div className="flex gap-4 pl-3 items-center ">
+        <div className="flex gap-1 justify-center items-center ">
           <img src={uv} className="size-15" /> {current.uv}
         </div>
-        <div className="flex gap-4 pl-17 items-center ">
-          <GrUpdate /> {current.last_updated.substring(11)}
+        <div className="flex gap-1 justify-center items-center ">
+          <GrUpdate size={30} /> {current.last_updated.substring(11)}
         </div>
       </div>
     </div>
