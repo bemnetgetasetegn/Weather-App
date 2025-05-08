@@ -15,7 +15,7 @@ const HourlyForcast = ({ forcast }: Props) => {
     (f) => parseInt(f.time.substring(11)) >= hr
   );
   return (
-    <div className="border-[1px] border-white/30 transform transition-transform rounded-2xl h-40 gap-5 flex items-center justify-center">
+    <div className="border-[1px] overflow-x-scroll lg:overflow-x-auto border-white/30 transform transition-transform rounded-2xl h-40 md:gap-5 gap-1 flex items-center justify-center">
       {flatten.slice(0, 7).map((fla) => (
         <ForeCastCard
           key={fla.time}
