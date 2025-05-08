@@ -26,7 +26,7 @@ const WeatherMetrics = ({ current }: Props) => {
   return (
     <div className="border transform transition-transform hover:scale-102 border-white/30 rounded-2xl">
       <div className="grid grid-cols-2 grid-rows-3  md:p-3 md:text-2xl text-[15px] font-bold ">
-        <div className="flex items-center">
+        <div className="flex gap-1 justify-center items-center">
           <img
             src={windDrection}
             alt={current.wind_dir}
