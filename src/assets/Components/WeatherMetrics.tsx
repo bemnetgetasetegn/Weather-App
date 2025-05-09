@@ -48,7 +48,7 @@ const WeatherMetrics = ({ current }: Props) => {
         <div className="flex gap-1 justify-center items-center ">
           <img src={uv} className="size-15" /> {current.uv}
         </div>
-        <div className="flex gap-1 justify-center items-center ">
+        <div className="flex gap-3 justify-center items-center ">
           <GrUpdate size={30} /> {current.last_updated.substring(11)}
         </div>
       </div>
